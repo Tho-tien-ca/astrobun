@@ -87,7 +87,7 @@ def get_zodiac_sign_and_degree(degree):
     return sign, degree_in_sign
 
 def get_city_suggestions(query):
-    geolocator = Nominatim(user_agent="astrology_app")
+    geolocator = Nominatim(user_agent="bunni_app_0990")
     location = geolocator.geocode(query, exactly_one=False, limit=5, language='en')  # Thêm tham số 'language'
     if location:
         return [f"{loc.address} ({loc.latitude}, {loc.longitude})" for loc in location]
@@ -102,7 +102,7 @@ def decimal_to_dms(degree):
 
 # Function to get latitude, longitude, and timezone from place name
 def get_location_and_timezone(place):
-    geolocator = geopy.geocoders.Nominatim(user_agent="astrology_app")
+    geolocator = geopy.geocoders.Nominatim(user_agent="bunni_app_0990")
     location = geolocator.geocode(place)
     if location:
         lat, lon = location.latitude, location.longitude
